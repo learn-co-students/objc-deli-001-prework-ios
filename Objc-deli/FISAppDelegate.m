@@ -25,21 +25,21 @@
     
     } else {
         
-    NSMutableString *result = [[NSMutableString alloc] init];
+    NSMutableString *namesWithLineNumbers = [[NSMutableString alloc] init];
         
        for (NSInteger i = 0; i < [deliLine count]; i++) {
             
            int *lineNumber =i+1;
            
-           NSString *numberAndName = [NSString stringWithFormat:@"\n%li. %@",lineNumber,deliLine[i]];
+           NSString *lineNumberAndName = [NSString stringWithFormat:@"\n%li. %@",lineNumber,deliLine[i]];
            
-           [result appendFormat:@"%@", numberAndName];
+           [namesWithLineNumbers appendFormat:@"%@", lineNumberAndName];
            
         }
         
-        NSString *resultString = [NSString stringWithFormat:@"The line is:%@", result];
+        NSString *introTextNamesAndLineNumbers = [NSString stringWithFormat:@"The line is:%@", namesWithLineNumbers];
         
-        return resultString;
+        return introTextNamesAndLineNumbers;
     }
 }
 
