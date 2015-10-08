@@ -16,8 +16,9 @@
  
  */
 
-- (NSString *) stringWithDeliLine:(NSArray *)deliLine{
-
+- (NSString *) stringWithDeliLine:(NSMutableArray *)deliLine {
+    
+    
     if ([deliLine isEqualToArray: @[]]) {
     
         return @"The line is currently empty.";
@@ -34,10 +35,13 @@
             
             [mNumberedDeliLine addObject:numberAndName];
         }
-        return [NSString stringWithFormat:@"The line is:%@", mNumberedDeliLine];
+        
+        NSString *resultString = [NSString stringWithFormat:@"The line is:%@", mNumberedDeliLine];
+        
+        return resultString;
     }
 }
-   
+
 
 -(void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
    
