@@ -70,7 +70,6 @@ describe(@"FISAppDelegate", ^{
         it(@"should return the correct customer name", ^{
             NSString *nextCustomer = [appDelegate serveNextCustomerInDeliLine:deliLine];
             expect(nextCustomer).to.equal(@"Anita");
-
             nextCustomer = [appDelegate serveNextCustomerInDeliLine:deliLine];
             expect(nextCustomer).to.equal(@"Alan");
         });
