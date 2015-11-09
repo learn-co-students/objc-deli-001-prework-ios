@@ -36,12 +36,12 @@
 - (NSString *) serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
     NSString *nextCoustomer = deliLine[0];
     [deliLine removeObjectAtIndex:0];
-    if ([deliLine count] == 0){
-        nextCoustomer = @"The line is currently empty.";
-    }
-    else {
-        nextCoustomer = deliLine[0];
-        }
+    //if ([deliLine count] == 0){
+      //  nextCoustomer = @"The line is currently empty.";
+    //}
+    //else {
+      //  nextCoustomer = deliLine[0];
+        //}
     return nextCoustomer;
     }
 
