@@ -23,14 +23,15 @@
     }
     else {
         for(NSInteger i=0; i< [deliLine count]; i++) {
-            NSString * customerNames=[NSString stringWithFormat:@"\n%lu. %@", i+1, deliLine[i]];
+            NSString * customerNames=[NSString stringWithFormat:@"\n%lu. %@", i+1, deliLine[i]]; // space between %lu %@
             customerLine=[customerLine stringByAppendingString:customerNames];
         }
         return customerLine;
+    }
 }
 
     -(NSMutableArray *)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
-       [deliLine addObject:customerNames];
+       [deliLine addObject: name];
         return deliLine; // mutable method
     }
     
@@ -39,6 +40,5 @@
         [deliLine removeObjectAtIndex:0];
         return firstCustomer;
     }
-}
 
 @end
