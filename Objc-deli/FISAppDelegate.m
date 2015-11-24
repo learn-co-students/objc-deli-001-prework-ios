@@ -14,12 +14,12 @@
     NSString *line = @"The line is:";
     
     if ([deliLine count] == 0) {
-        NSLog(@"The line is empty.");
+        NSString *goodbye = @"The line is empty.";
+        return goodbye;
     }
     else
     {
-        for (NSUInteger i = 0; i < [deliLine count]; i++)
-        {
+        for (NSUInteger i = 0; i < [deliLine count]; i++){
             NSString *announce = [NSString stringWithFormat:@"\n %lu. %@.", i++, deliLine[i]];
             line = [line stringByAppendingString:announce];
         }
@@ -28,10 +28,15 @@
     return  line;
 }
 -(NSString *)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
+    [deliLine addObject:name];
+    
     return nil;
 }
 -(NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
-    return nil;
+    NSString *names = deliLine[0];
+    [deliLine removeObjectAtIndex:0];
+    
+    return names;
 }
 
 @end
