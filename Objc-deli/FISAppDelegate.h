@@ -13,7 +13,7 @@
  */
 
 - (NSString *) stringWithDeliLine: (NSArray *) deliline;
-- (NSString *) addName:toDeliLine: (NSString *)name; (NSMutableArray *)deliLine;
+- (NSString *) addNametoDeliLine: (NSString *)name: (NSMutableArray *)deliLine;
 - (NSString *) serveNextCustomerInDeliLine: (NSMutableArray *) deliline;
 
 @end
