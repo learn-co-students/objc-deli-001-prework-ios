@@ -12,4 +12,10 @@
  
  */
 
+- (NSString *) stringWithDeliLine: (NSArray *) deliLine;
+- (void) addname: (NSString *) name toDeliLine:(NSMutableArray *) deliLine;
+- (NSString *) serveNextCustomerInDeliLine: (NSMutableArray *) deliLine;
+
+
+
 @end
