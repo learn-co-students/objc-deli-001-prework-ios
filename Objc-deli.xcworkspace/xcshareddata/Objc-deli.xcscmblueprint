@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9BC6D62F9E843339E0F6F0FF625C47B6EDF45F05",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "9BC6D62F9E843339E0F6F0FF625C47B6EDF45F05" : 0,
+    "8249E415C0975FFB5C73E01C9BBCC1E21BAC46BF" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "2F5515D4-D991-4B24-BC47-C9ADE6C383D3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "9BC6D62F9E843339E0F6F0FF625C47B6EDF45F05" : "objc-deli-001-prework-ios\/",
+    "8249E415C0975FFB5C73E01C9BBCC1E21BAC46BF" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Objc-deli",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Objc-deli.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mvargas2193\/learnerrors.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "8249E415C0975FFB5C73E01C9BBCC1E21BAC46BF"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:mvargas2193\/objc-deli-001-prework-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9BC6D62F9E843339E0F6F0FF625C47B6EDF45F05"
+    }
+  ]
+}
