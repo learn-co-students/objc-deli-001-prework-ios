@@ -10,10 +10,43 @@
     return YES;
 }
 
+// NEW
 - (NSString*)stringWithDeliLine:(NSArray*)deliLine;
 {
     NSString *deliCurrentStatus;
 
+    if ([deliLine count] == 0) {
+        deliCurrentStatus = [NSString stringWithFormat:@"The line is currently empty."];
+    } else {
+        deliCurrentStatus = @"The line is:";
+        
+        for (NSUInteger i = 0; i < [deliLine count]; i++) {
+            NSString *customerQuery= [NSString stringWithFormat:@"\n %@",deliLine[i]];
+            deliCurrentStatus = [deliCurrentStatus stringByAppendingString:customerQuery];
+        }
+    }
+    return deliCurrentStatus;
+}
+
+- (void)addName:(NSInteger*)lastNumber toDeliLine:(NSMutableArray*)deliLine;
+{
+    NSInteger *newNumber = lastNumber + 1;
+    [deliLine addObject:[NSNumber numberWithInteger:*newNumber]];
+}
+
+- (NSNumber*)serveNextCustomerInDeliLine:(NSMutableArray*)deliLine;
+{
+    NSNumber* firstInLine = deliLine[0];
+    [deliLine removeObjectAtIndex:0];
+    return firstInLine;
+}
+
+
+/* ORIGINAL
+ - (NSString*)stringWithDeliLine:(NSArray*)deliLine;
+{
+    NSString *deliCurrentStatus;
+    
     if ([deliLine count] == 0) {
         deliCurrentStatus = [NSString stringWithFormat:@"The line is currently empty."];
     } else {
@@ -39,4 +72,5 @@
     [deliLine removeObjectAtIndex:0];
     return firstInLine;
 }
+*/
 @end

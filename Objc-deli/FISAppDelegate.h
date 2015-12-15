@@ -8,8 +8,12 @@
 
 - (NSString*)stringWithDeliLine:(NSArray*)deliLine;
 
-- (void)addName:(NSString*)name toDeliLine:(NSMutableArray*)deliLine;
+- (void)addName:(NSInteger*)lastNumber toDeliLine:(NSMutableArray*)deliLine;
 
-- (NSString*)serveNextCustomerInDeliLine:(NSMutableArray*)deliLine;
+- (NSNumber*)serveNextCustomerInDeliLine:(NSMutableArray*)deliLine;
+
+//- (void)addName:(NSString*)name toDeliLine:(NSMutableArray*)deliLine;
+
+//- (NSString*)serveNextCustomerInDeliLine:(NSMutableArray*)deliLine;
 
 @end
