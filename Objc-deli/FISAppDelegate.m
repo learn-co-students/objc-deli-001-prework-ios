@@ -12,7 +12,13 @@
 
 - (NSString *)stringWithDeliLine:(NSArray *)deliLine {
     
-    return nil;
+    if ([deliLine count] == 0) return @"The line is currently empty.";
+    
+    NSMutableString *string = [@"The line is:" mutableCopy];
+    for (int i = 0; i < [deliLine count]; i++) {
+        [string appendFormat:@"\n%i. %@", i+1, deliLine[i]];
+    }
+    return string;
 }
 
 - (void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
