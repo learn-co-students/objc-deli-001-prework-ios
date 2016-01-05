@@ -23,6 +23,7 @@
 
 - (void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
     
+    [deliLine addObject:name];
 }
 
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
