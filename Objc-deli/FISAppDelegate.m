@@ -10,10 +10,18 @@
     return YES;
 }
 
-/*
- 
- *  Define your methods here!
- 
- */
+- (NSString *)stringWithDeliLine:(NSArray *)deliLine {
+    
+    return nil;
+}
+
+- (void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
+    
+}
+
+- (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
+    
+    return nil;
+}
 
 @end
