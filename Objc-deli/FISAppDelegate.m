@@ -28,7 +28,9 @@
 
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
     
-    return nil;
+    NSString *nextCustomer = deliLine[0];
+    [deliLine removeObjectAtIndex:0];
+    return nextCustomer;
 }
 
 @end
