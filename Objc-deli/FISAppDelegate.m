@@ -39,16 +39,8 @@
 }
 
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
-    BOOL customerServed = NO;
-    NSString *firstCustomer;
-    
-    for (NSUInteger i =0; i < [deliLine count]&&!customerServed; i++) {
-        if (deliLine[i]) {
-            customerServed = YES;
-            firstCustomer = deliLine[i];
-            [deliLine removeObjectAtIndex:i];
-        }
-    }
+    NSString *firstCustomer = deliLine[0];
+    [deliLine removeObjectAtIndex:0];
     
     return firstCustomer;
 }
