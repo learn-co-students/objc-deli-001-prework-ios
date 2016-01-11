@@ -30,11 +30,11 @@
 
     } else {
             //if the line is greater than zero, create a string to return the line is:
-        [deliLineString appendString:@"The line is: \n"];
+        [deliLineString appendString:@"The line is:"];
         //create i variable to track deliLine index, make it increase until it reaches the end of deliLine array
         for (NSUInteger i = 0; i < [deliLine count]; i++) {
         //append a format to the previously appended deliLineString, \n makes a new line %lu converts i from integer to string
-            [deliLineString appendFormat:@"%lu. %@ \n", i + 1, deliLine[i]];
+            [deliLineString appendFormat:@"\n%lu. %@", i + 1, deliLine[i]];
             
         }
     }
