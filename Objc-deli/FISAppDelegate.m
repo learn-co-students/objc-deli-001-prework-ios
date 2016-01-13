@@ -11,7 +11,7 @@
 }
 
 - (NSString *)stringWithDeliLine:(NSArray *)deliLine{
-    NSString *emptyLine = @"The line is currently empty";
+    NSString *emptyLine = @"The line is currently empty.";
     NSString *busyLine = @"The line is:";
     if([deliLine count] == 0){
         return emptyLine;
@@ -24,11 +24,14 @@
     }
 }
 
-- (NSString *)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine{
-    return nil;
+- (void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine{
+    [deliLine addObject: name];
 }
+
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine{
-    return nil;
+    NSString *removeFirstCustomer = deliLine[0];
+    [deliLine removeObjectAtIndex:0];
+    return removeFirstCustomer;
 }
 
 @end
