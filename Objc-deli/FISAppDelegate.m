@@ -21,16 +21,16 @@
     }
     else {
         NSString *theLineContains =@"The line is: /n";
-        for (NSUInteger i = 0; i < [deliLine count] ; i++) {
+        for (NSInteger i = 0; i < [deliLine count] ; i++) {
             NSInteger *numberInLine = (i + 1);
             NSMutableString *componentsOfTheLine = (@"%lu.", @"%@", numberInLine, deliLine[i]);
             theLineContains = [NSString stringWithString:componentsOfTheLine];
             
-            NSLog(theLineContains); //just to see how and if it works
             
-            return theLineContains;
             
         }
+        NSLog(theLineContains);
+        return theLineContains;
         
     }
 return nil; // the outside case, in the case that nothing else works.
@@ -46,12 +46,17 @@ return nil; // the outside case, in the case that nothing else works.
 
 - (void)addName:(NSString *)name
      toDeliLine:(NSMutableArray *)deliLine{
+    
+    
+    /* I MIGHT NOT NEED THESE NEXT TWO LINES, REREAD THE ASSIGNMENT AND SEE EXACTLY WHAT SHOULD HAPPEN HERE. I THINK ONLY UPDATING AND ALREADY GIVEN MUTABLE ARRAY! :)
     NSArray *whereDoIGetNamesFrom = @[@"Anita", @"Donny", @"Liana"];
     NSMutableArray *namesList = [NSMutableArray arrayWithArray: whereDoIGetNamesFrom]; //This is temporary go back over this think it through.
+     
+     */
     /*for (NSUInteger i = 0; i < [deliLine count]; i ++) {
         //I don't know if I need this loop. Will figure out.
     }*/
-    [namesList insertObject:name atIndex:([namesList count])];
+    [deliLine addObject:name)];
     return;
 }
 
@@ -60,7 +65,10 @@ return nil; // the outside case, in the case that nothing else works.
  Build the method serveNextCustomerInDeliLine: method. Save the first name in the deliLine to an NSString object within the method. Then remove the first object from the deliLine and return the name you removed. Hint: Using removeObject: could be problematic for you. There's another method on NSMutableArray that will let you specify an object to remove by array index.
  */
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine{
-    return nil;
+
+    NSString *firstInLine = deliLine[0];
+    [deliLine removeObjectAtIndex:0];
+    return firstInLine;
 }
 
 @end
