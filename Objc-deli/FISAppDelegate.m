@@ -46,10 +46,12 @@ return nil; // the outside case, in the case that nothing else works.
 
 - (void)addName:(NSString *)name
      toDeliLine:(NSMutableArray *)deliLine{
-
-    for (NSUInteger i = 0; i < [deliLine count]; i ++) {
+    NSArray *whereDoIGetNamesFrom = @[@"Anita", @"Donny", @"Liana"];
+    NSMutableArray *namesList = [NSMutableArray arrayWithArray: whereDoIGetNamesFrom]; //This is temporary go back over this think it through.
+    /*for (NSUInteger i = 0; i < [deliLine count]; i ++) {
         //I don't know if I need this loop. Will figure out.
-    }
+    }*/
+    [namesList insertObject:name atIndex:([namesList count])];
     return;
 }
 
