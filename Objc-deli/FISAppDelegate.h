@@ -9,7 +9,7 @@
 - (NSString *)stringWithDeliLine:(NSArray *)deliLine;
 
 - (void)addName:(NSString *)name
-     toDeliLine:(NSMutableArray *)arguments;
+     toDeliLine:(NSMutableArray *)deliLine;
 
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine;
 
