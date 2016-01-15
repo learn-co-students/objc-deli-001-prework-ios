@@ -6,6 +6,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -16,21 +19,35 @@
  */
 - (NSString *)stringWithDeliLine:(NSArray *)deliLine{
     NSString *emptyCase = @"The line is currently empty.";
+    NSString *theLineContains =@"The line is:";
+    NSString *lineContaining = @"";
+    NSInteger index;
     if ([deliLine count] == 0 ) {
+        
         return emptyCase;
     }
     else {
-        NSString *theLineContains =@"The line is: /n";
+        
         for (NSInteger i = 0; i < [deliLine count] ; i++) {
+            index = i+1;
+            //I NEED INTEGER TO BE A VALUE NOT A NUMBER AKA LONG, THAT'S IT. NEED TO LOOK UP HOW TO DO IT.
+            NSString *numberInLine = [NSString stringWithFormat:@"\n%ld. ", (long)index];
+            NSString *names = (@"%@", deliLine[i]);
+            NSString *nameAndNumber = [numberInLine stringByAppendingString:names];
+            lineContaining = [lineContaining stringByAppendingString: nameAndNumber];
+          //@"The line is:\n1. Anita\n2. Alan\n3. Ada\n4. Aaron\n5. Alan"
+            
+            /*
+             
             NSInteger *numberInLine = (i + 1);
-            NSMutableString *componentsOfTheLine = (@"%lu.", @"%@", numberInLine, deliLine[i]);
+            NSString *componentsOfTheLine = (@"/n%lu.", @"%@", numberInLine, deliLine[i]);
             theLineContains = [NSString stringWithString:componentsOfTheLine];
+             
+             */
             
-            
-            
+          
         }
-        NSLog(theLineContains);
-        return theLineContains;
+        return [theLineContains stringByAppendingString:lineContaining];
         
     }
 return nil; // the outside case, in the case that nothing else works.
@@ -47,6 +64,8 @@ return nil; // the outside case, in the case that nothing else works.
 - (void)addName:(NSString *)name
      toDeliLine:(NSMutableArray *)deliLine{
     
+    //  *******DIDN'T WANT TO DELETE NEXT COMMENT JUST IN CASE I NEED IT BUT WILL PROBABLY TAKE IT OUT!*****  //
+    
     
     /* I MIGHT NOT NEED THESE NEXT TWO LINES, REREAD THE ASSIGNMENT AND SEE EXACTLY WHAT SHOULD HAPPEN HERE. I THINK ONLY UPDATING AND ALREADY GIVEN MUTABLE ARRAY! :)
     NSArray *whereDoIGetNamesFrom = @[@"Anita", @"Donny", @"Liana"];
@@ -56,7 +75,7 @@ return nil; // the outside case, in the case that nothing else works.
     /*for (NSUInteger i = 0; i < [deliLine count]; i ++) {
         //I don't know if I need this loop. Will figure out.
     }*/
-    [deliLine addObject:name)];
+    [deliLine addObject:name];
     return;
 }
 
