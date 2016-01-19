@@ -13,14 +13,14 @@
 -(NSString *)stringWithDeliLine:(NSArray *)deliLine{
     NSMutableString *line  = [@"" mutableCopy];
     
-    if ([deliLine count] <= 0)
+    if ([deliLine count] == 0)
     {
         [line appendString: @"The line is currently empty."];
     }
     else
     {
         [line appendString: @"The line is:"];
-        //NSMutableString *line  = [@"The line is:" mutableCopy];
+        
         
         for (NSUInteger i = 0; i < [deliLine count]; i++){
             
@@ -28,9 +28,10 @@
          }
     }
         return line;
-}
     
-    -(void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine;{
+}
+
+    -(void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine{
         [deliLine addObject:name];
     }
     
@@ -42,9 +43,8 @@
     }
 
 /*
- 
  *  Define your methods here!
- 
+
  */
 
 @end
