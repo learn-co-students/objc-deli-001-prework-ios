@@ -7,37 +7,56 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    
+   // NSArray *custoer =@[@"Anita", @"Alan", @"Ada", @"Aaron", @"Alan"];
+    
+   // NSString *strreturn =[self stringWithDeliLine:custoer];
+    
+    
     return YES;
 }
 
-
-
 -(NSString*)stringWithDeliLine:(NSArray*)array
 {
-
-    return @"";
-
+    
+    NSString *strstring;
+    
+    if(array.count>0)
+    {
+        strstring =@"The line is:";
+        for(int i = 0;i<array.count;i++)
+        {
+        
+            strstring = [strstring stringByAppendingString:[NSString stringWithFormat:@"\\n%d. %@,",i+1,[array objectAtIndex:i]]];
+        
+        }
+        
+    
+    }
+    else{
+    
+    strstring =@"The line is currently empty";
+    }
+    NSLog(@"%@",strstring);
+    
+    
+    return strstring;
+    
 }
-
 -(void)addName:(NSString*)name toDeliLine:(NSMutableArray*)array
 {
 
-
 }
-
-
 -(NSString*)serveNextCustomerInDeliLine:(NSMutableArray*)array
 {
 
-
-return @"";
+return [array objectAtIndex:array.count-1];
 }
 
 /*
  
  *  Define your methods here!
- 
-
 
 NSString *str1 = @"racecar";
 NSMutableString *str2 = [[NSMutableString alloc] init];
