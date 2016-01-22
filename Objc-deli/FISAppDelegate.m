@@ -10,33 +10,39 @@
     return YES;
 }
 
-- (NSString *)stringWithDeliLine:(NSArray *)deliLine; {
-    if ([deliLine count] == 0) {
-        NSLog(@"The line is currently empty.");
+- (NSString *)stringWithDeliLine:(NSArray *)deliLine {
+    NSString *empty = @"The line is currently empty.";
+    NSInteger limit = [deliLine count];
+    
+    if (limit == 0) {
+        NSLog(@"%@", empty);
     }
     else {
-              NSLog(@"The line is:");
-        for  (NSUInteger i = 0 ;i< [deliLine count] ; i++) {
+        NSLog(@"The line is:");
+        for  (NSUInteger i = 0 ;i< limit ; i++) {
                   NSUInteger lineOrder = i+1;
-                  NSString *printDeliLine = [NSString stringWithFormat:@"%lu. %@",lineOrder, deliLine[i]];
-                  NSLog(@"%@", printDeliLine);
-                  return printDeliLine;
-        } ;
-        }};
+            NSLog(@"%lu. %@\n", lineOrder, deliLine [i] );
+        }
+    };
+};
 
-    
-- (void) ToDeliLine:(NSString *)name :(NSMutableArray *)deliLine; {
+
+-(void)addName:ToDeliLine : (NSString *)name :(NSMutableArray *)deliLine; {
     [deliLine addObject: name];
+    
 };
 
-    
-- (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine; {
-        for (NSUInteger i = 0; i < [deliLine count]; i++ ) {
-            NSString *savedString = deliLine[i];
-            [deliLine removeObjectAtIndex: i];
-            return savedString;
-        };
+
+
+-(NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
+    NSString *savedString = [deliLine objectAtIndex:0];
+    [deliLine removeObjectAtIndex:0];
+    NSLog(@"%@", savedString);
+    return savedString;
 };
+
+
+
 
 
 @end
