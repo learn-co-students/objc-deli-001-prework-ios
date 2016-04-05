@@ -18,18 +18,19 @@
 
 - (NSString *)stringWithDeliLine:(NSArray *)deliLine {
     
-    NSString *lineIs = @"The line is:";
+    NSString *customersInLine = @"The line is:";
+    NSUInteger deliLineCount = [deliLine count];
     
-    if ([deliLine count] == 0) {
-        lineIs = @"The line is currently empty.";
+    if (deliLineCount == 0) {
+        customersInLine = @"The line is currently empty.";
     } else {
-        for (NSUInteger i = 0; i < [deliLine count]; i++) {
+        for (NSUInteger i = 0; i < deliLineCount; i++) {
             NSUInteger customerNumber = i + 1;
-            lineIs = [lineIs stringByAppendingFormat: @"\n%lu. %@", customerNumber, deliLine[i]];
+            customersInLine = [customersInLine stringByAppendingFormat: @"\n%lu. %@", customerNumber, deliLine[i]];
         }
     }
     
-    return lineIs;
+    return customersInLine;
 }
 
 - addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
