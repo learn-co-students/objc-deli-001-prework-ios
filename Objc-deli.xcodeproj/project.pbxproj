@@ -450,11 +450,7 @@
 			baseConfigurationReference = 5FF818F84C8301947B89DA8A /* Pods-Objc-deliTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Objc-deli.app/Objc-deli";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Objc-deli/Objc-deli-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -474,11 +470,7 @@
 			baseConfigurationReference = 6290DE98E6370C37D028B506 /* Pods-Objc-deliTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Objc-deli.app/Objc-deli";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Objc-deli/Objc-deli-Prefix.pch";
 				INFOPLIST_FILE = "Objc-deliTests/Objc-deliTests-Info.plist";
