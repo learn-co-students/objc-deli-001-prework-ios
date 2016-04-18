@@ -18,19 +18,19 @@
 
 - (NSString *)stringWithDeliLine:(NSArray *)deliLine {
     
-    NSMutableString *deliString = [[NSMutableString alloc]init];
+    NSMutableString *mdeliString = [[NSMutableString alloc]init];
     
     if ([deliLine count] == 0) {
-        return @"The line is currently empty.";
+        [mdeliString appendString:@"The line is currently empty."];
+        return mdeliString;
     }
     else {
-        [deliString appendString:@"The line is:"];
+        [mdeliString appendString:@"The line is:"];
         for (NSUInteger i = 0; i < [deliLine count]; i++) {
             NSUInteger queueNumber = i + 1;
-            NSString *personAndNumber = [NSString stringWithFormat:(@"\n%lu. %@"), queueNumber, deliLine[i]];
-            [deliString appendString:personAndNumber];
+            [mdeliString appendFormat:@"\n%lu. %@", queueNumber, deliLine[i]];
         }
-        return deliString;
+        return [NSString stringWithString:mdeliString];
     }
 }
 
