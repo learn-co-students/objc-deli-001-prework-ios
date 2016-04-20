@@ -8,11 +8,46 @@
 {
     // Override point for customization after application launch.
     
+   // NSArray *customer =@[@"Anita", @"Alan", @"Ada", @"Aaron", @"Alan"];
     
-   // NSArray *custoer =@[@"Anita", @"Alan", @"Ada", @"Aaron", @"Alan"];
+   // NSString *strreturn =[self stringWithDeliLine:customer];
     
-   // NSString *strreturn =[self stringWithDeliLine:custoer];
+    return YES;
     
+}
+
+    -(NSString*) stringWithDeliLine:(NSArray*) deliLine{
+        NSString *strstring;
+        if([deliLine[0] isEqual: nil]){
+            return @"The Line is currently empty.\n";
+        } else {
+            strstring =@"The line is: ";
+            //NSLog(@"The Line is:\n");
+            NSUInteger size = [deliLine count];
+            for(NSUInteger i=0; i<size; i++){
+                strstring = [strstring stringByAppendingString:[NSString stringWithFormat:@"\\n%lu. %@,",i+1,[deliLine objectAtIndex:i]]];
+                //NSLog(@"%ld. %@ \n", i+1, deliLine[i]); // instead of printing, append it to the end of a string
+            }
+        }
+        // NSLog(@"%@ ", strstring);
+        return strstring;       //return the string that was appended to instead of this word.
+    }
+    
+-(void)addName:(NSString*)name  toDeliLine:(NSMutableArray*) deliLine{
+        [deliLine addObject:name];
+}
+    
+    
+-(NSString*) serveNextCustomerInDeliLine:(NSMutableArray*) deliLine{
+        NSString* nextPerson = deliLine[0];
+        
+        [deliLine removeObjectAtIndex: 0];
+        
+        return nextPerson;
+}
+    
+    @end /*
+        
     
     return YES;
 }
@@ -24,7 +59,6 @@
     
     if(array.count>0)
     {
-        strstring =@"The line is:";
         for(int i = 0;i<array.count;i++)
         {
         
@@ -53,8 +87,8 @@
 
 return [array objectAtIndex:array.count-1];
 }
-
-/*
+          
+/////////////////////////////////////////////////////////////////////////////////////////
  
  *  Define your methods here!
 
@@ -86,5 +120,4 @@ Build the method addName:toDeliLine: method to add the submitted name to the del
 
  
   */
- 
-@end
+
