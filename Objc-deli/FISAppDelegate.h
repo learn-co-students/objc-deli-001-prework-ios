@@ -6,11 +6,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-/*
- 
- *  Declare your methods here!
- 
- */
 
 -(NSString*)stringWithDeliLine:(NSArray*)array;
 

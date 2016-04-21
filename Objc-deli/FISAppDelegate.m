@@ -8,7 +8,7 @@
 {
     // Override point for customization after application launch.
     
-   // NSArray *customer =@[@"Anita", @"Alan", @"Ada", @"Aaron", @"Alan"];
+   // NSString *customer =@[@"Anita", @"Alan", @"Ada", @"Aaron", @"Alan"];
     
    // NSString *strreturn =[self stringWithDeliLine:customer];
     
@@ -16,17 +16,18 @@
     
 }
 
+
     -(NSString*) stringWithDeliLine:(NSArray*) deliLine{
         NSString *strstring;
-        if([deliLine[0] isEqual: nil]){
+        if([deliLine[0] isEqual: nil]){          // if([deliLine[0] isEqual: nil]){ (@"The line is:\n1. Anita\n2. Alan\n3. Ada\n4. Aaron\n5. Alan"); ?????*******
             return @"The Line is currently empty.\n";
         } else {
-            strstring =@"The line is: ";
+            strstring =@"The line is:";
             //NSLog(@"The Line is:\n");
             NSUInteger size = [deliLine count];
             for(NSUInteger i=0; i<size; i++){
-                strstring = [strstring stringByAppendingString:[NSString stringWithFormat:@"\\n%lu. %@,",i+1,[deliLine objectAtIndex:i]]];
-                //NSLog(@"%ld. %@ \n", i+1, deliLine[i]); // instead of printing, append it to the end of a string
+                strstring = [strstring stringByAppendingString:[NSString stringWithFormat:@"\n%u. %@",i+1,[deliLine objectAtIndex:i]]];
+                // NSLog(@"%ld. %@ \n", i+1, deliLine[i]); // instead of printing, append it to the end of a string
             }
         }
         // NSLog(@"%@ ", strstring);
