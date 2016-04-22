@@ -9,7 +9,13 @@
 /*
  
  *  Declare your methods here!
- 
  */
+
+-(NSString *)stringWithDeliLine:(NSArray *)deliLine;
+-(void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine;
+-(NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine;
+
+ 
+
 
 @end
