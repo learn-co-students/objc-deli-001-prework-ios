@@ -4,6 +4,11 @@
 
 @implementation FISAppDelegate
 
+// Objectives:
+// 1. Write custom methods that take arguments and return results.
+// 2. Use a method as a helper method.
+// 3. Read and run unit tests to check your work.
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
