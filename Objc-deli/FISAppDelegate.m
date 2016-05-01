@@ -10,17 +10,6 @@
     return YES;
 }
 
-//describe(@"stringWithDeliLine:", ^{
-//    it(@"returns the customers in line as a string", ^{
-//        expect(deliString).to.equal(@"The line is:\n1. Anita\n2. Alan\n3. Ada\n4. Aaron\n5. Alan");
-//        expect(deliString2).to.equal(@"The line is:\n1. Joe\n2. Mark");
-//    });
-//    
-//    it(@"explains if the line is empty", ^{
-//        [deliLine removeAllObjects];
-//        deliString = [appDelegate stringWithDeliLine:deliLine];
-//        expect(deliString).to.equal(@"The line is currently empty.");
-
 - (NSString *)stringWithDeliLine: (NSArray *)deliLine {
     
     NSMutableString *string = [NSMutableString string];
