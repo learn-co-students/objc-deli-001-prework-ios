@@ -16,38 +16,70 @@
     
 }
 
+// ********
+// NSString *str1 = @"racecar";
+// NSMutableString *str2 = [[NSMutableString alloc] init];
+// NSInteger strLength = [str1 length]-1;
+// for (NSInteger i=strLength; i>=0; i--)
+// {
+//     [str2 appendString:[NSString stringWithFormat:@"%C",[str1 characterAtIndex:i]]];
+    
+// }
+// if ([str1 isEqual:str2])
+// {
+ //    NSLog(@"str %@ is palindrome",str1);
+    
+ //    ***************
 
-    -(NSString*) stringWithDeliLine:(NSArray*) deliLine{
-        NSString *strstring;
-        if([deliLine[0] isEqual: nil]){          // if([deliLine[0] isEqual: nil]){ (@"The line is:\n1. Anita\n2. Alan\n3. Ada\n4. Aaron\n5. Alan"); ?????*******
-            return @"The Line is currently empty.\n";
-        } else {
-            strstring =@"The line is:";
-            //NSLog(@"The Line is:\n");
-            NSUInteger size = [deliLine count];
-            for(NSUInteger i=0; i<size; i++){
-                strstring = [strstring stringByAppendingString:[NSString stringWithFormat:@"\n%u. %@",i+1,[deliLine objectAtIndex:i]]];
-                // NSLog(@"%ld. %@ \n", i+1, deliLine[i]); // instead of printing, append it to the end of a string
-            }
-        }
-        // NSLog(@"%@ ", strstring);
-        return strstring;       //return the string that was appended to instead of this word.
+// deliLine = [[NSMutableArray alloc] initWithArray:@[@"Anita", @"Alan", @"Ada", @"Aaron", @"Alan"] ];
+// deliLine2 = [[NSMutableArray alloc] initWithArray:@[@"Charles",@"Magnus"]];
+//
+//describe(@"stringWithDeliLine:", ^{
+  //  it(@"returns the customers in line as a string", ^{
+    //    expect(deliString).to.equal(@"The line is:\n1. Anita\n2. Alan\n3. Ada\n4. Aaron\n5. Alan");
+      //  expect(deliString2).to.equal(@"The line is:\n1. Joe\n2. Mark");
+  //  });
+
+- (NSString*)stringWithDeliLine:(NSMutableArray*)deliLine {
+    //@"The line is:\n1. Anita\n2. Alan\n3. Ada\n4. Aaron\n5. Alan"
+    
+    if ([deliLine count] == 0) { //returns this line is empty if line is empty
+        return @"The line is currently empty.";
     }
     
--(void)addName:(NSString*)name  toDeliLine:(NSMutableArray*) deliLine{
-        [deliLine addObject:name];
+    NSMutableString *mutableDeliLine = [NSMutableString string]; // builds an empty mutable string
+    [mutableDeliLine appendString:@"The line is:"]; // this will activate mutable string
+    for (NSInteger i=0; i< [deliLine count]; i++) {
+        NSString *nextCustomer = [NSString stringWithFormat:@"\n%lu. %@", (i+1), deliLine[i]]; //makes string to add
+        [mutableDeliLine appendString:(NSString*)nextCustomer]; //adds to the string each time
+    }
+    
+    return mutableDeliLine;
+    
 }
+
+
+-(NSMutableArray*)addName:(NSString*)name toDeliLine:(NSMutableArray*)deliLine {
     
+    [deliLine addObject:name];
     
--(NSString*) serveNextCustomerInDeliLine:(NSMutableArray*) deliLine{
-        NSString* nextPerson = deliLine[0];
-        
-        [deliLine removeObjectAtIndex: 0];
-        
-        return nextPerson;
+    return deliLine;
+    
 }
+
+
+-(NSString*)serveNextCustomerInDeliLine:(NSMutableArray*)deliLine {
     
-    @end /*
+    NSString *theFirstCustomer = deliLine[0];
+    
+    [deliLine removeObjectAtIndex:0];
+    return theFirstCustomer;
+    
+}
+
+
+@end
+/*
         
     
     return YES;
