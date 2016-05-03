@@ -40,48 +40,44 @@
       //  expect(deliString2).to.equal(@"The line is:\n1. Joe\n2. Mark");
   //  });
 
-- (NSString*)stringWithDeliLine:(NSMutableArray*)deliLine {
+- (NSString*)stringWithDeliLine:(NSMutableArray*)deliLine { // Will return an NSString and is called stringWithDeliLine, the NSMutableArray deliLine is the parameter
     //@"The line is:\n1. Anita\n2. Alan\n3. Ada\n4. Aaron\n5. Alan"
     
-    if ([deliLine count] == 0) { //returns this line is empty if line is empty
+    if ([deliLine count] == 0) { //returns the line is empty if line is empty
         return @"The line is currently empty.";
     }
     
     NSMutableString *mutableDeliLine = [NSMutableString string]; // builds an empty mutable string
     [mutableDeliLine appendString:@"The line is:"]; // this will activate mutable string
-    for (NSInteger i=0; i< [deliLine count]; i++) {
-        NSString *nextCustomer = [NSString stringWithFormat:@"\n%lu. %@", (i+1), deliLine[i]]; //makes string to add
-        [mutableDeliLine appendString:(NSString*)nextCustomer]; //adds to the string each time
+    
+    for (NSInteger i=0; i< [deliLine count]; i++) { // creating NSInterger set to 0; whatever point/customer "i" is at in the deliLine add that person to the string; then increment "i" by one/the next person (i++) - will run indefintely by adding +1 down the deliLine.
+        NSString *nextCustomer = [NSString stringWithFormat:@"\n%lu. %@", (i+1), deliLine[i]]; //makes a temporary string to add to the first string created (enters the number in line", then a ".", then the name to add to the string.
+        [mutableDeliLine appendString:(NSString*)nextCustomer]; //adds the temporary value to the string each time (appending is happening here)
     }
     
-    return mutableDeliLine;
+    return mutableDeliLine; // stops the method. mutableDeliLine is an NSString
     
 }
 
-
--(NSMutableArray*)addName:(NSString*)name toDeliLine:(NSMutableArray*)deliLine {
+-(NSMutableArray*)addName:(NSString*)name toDeliLine:(NSMutableArray*)deliLine { // The name of the method is addName:toDeliLine. It will return an NSMutableArray called deliLine.
     
-    [deliLine addObject:name];
+    [deliLine addObject:name]; // is part of the mutablearray class that adds an object to an array. This method takes the string and adds it to the mutablearray deliLine.
     
-    return deliLine;
-    
+    return deliLine; // Then returns deliLine with the string now in it.
 }
 
-
--(NSString*)serveNextCustomerInDeliLine:(NSMutableArray*)deliLine {
+-(NSString*)serveNextCustomerInDeliLine:(NSMutableArray*)deliLine { // returns an NSString. The method is called serveNextCustomerInDeliLine
     
-    NSString *theFirstCustomer = deliLine[0];
+    NSString *theFirstCustomer = deliLine[0]; // temporary object theFirstCustomer is delcared as the first object in the array.
     
-    [deliLine removeObjectAtIndex:0];
-    return theFirstCustomer;
+    [deliLine removeObjectAtIndex:0]; // removes the first object in the array.
+    return theFirstCustomer; // returns the customer that was just deleted from deliLine.
     
 }
-
-
 @end
+
 /*
-        
-    
+ 
     return YES;
 }
 
