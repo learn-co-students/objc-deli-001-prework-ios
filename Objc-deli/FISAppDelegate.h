@@ -11,5 +11,7 @@
  *  Declare your methods here!
  
  */
-
+- (NSString *)stringWithDeliLine:(NSArray *)deliLine;
+- (void)addName:(NSArray *)name toDeliLine:(NSMutableArray *)deliLine;
+- (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine;
 @end
