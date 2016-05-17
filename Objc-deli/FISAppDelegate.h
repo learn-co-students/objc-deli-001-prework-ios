@@ -14,7 +14,7 @@
 
 - (NSString *)stringWithDeliLine: (NSArray *)deliLine;
 
-- (NSMutableArray *)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine;
+- (void *)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine;
 
 - (NSString *)serveNextCustomerInDeliLine: (NSMutableArray *)deliLine;
 
