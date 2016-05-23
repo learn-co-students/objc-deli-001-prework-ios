@@ -19,7 +19,6 @@
         [line appendString:@"The line is:"];
         for(NSUInteger i = 0; i < [deliLine count]; i++) {
             [line appendFormat:@"\n%lu. %@", i+1, deliLine[i]];
-            NSLog(@"%@", line);
         }
     }
     return line;
@@ -27,7 +26,6 @@
 
 - (void)addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
     [deliLine addObject:name];
-    return;
 }
 
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
