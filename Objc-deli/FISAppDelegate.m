@@ -30,7 +30,7 @@
 
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
     if([deliLine count] == 0) {
-        return @"";
+        return @"No one to serve: deli line is empty.";
     }
     else {
         NSString *nextCustomer = deliLine[0];
