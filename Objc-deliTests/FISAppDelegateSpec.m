@@ -28,13 +28,17 @@ describe(@"FISAppDelegate", ^{
         deliString = [appDelegate stringWithDeliLine:deliLine];
         deliString2 = [appDelegate stringWithDeliLine:deliLine2];
     });
+    
+    //adding another instance of the deliLine as a second NSMutableArray with names to add if deliLine is empty 4/25/2016
 
     describe(@"stringWithDeliLine:", ^{
         it(@"returns the customers in line as a string", ^{
             expect(deliString).to.equal(@"The line is:\n1. Anita\n2. Alan\n3. Ada\n4. Aaron\n5. Alan");
             expect(deliString2).to.equal(@"The line is:\n1. Joe\n2. Mark");
+            
         });
-
+// working on implementing the strings 1:32pm 4/20/2016
+        
         it(@"explains if the line is empty", ^{
             [deliLine removeAllObjects];
             deliString = [appDelegate stringWithDeliLine:deliLine];
