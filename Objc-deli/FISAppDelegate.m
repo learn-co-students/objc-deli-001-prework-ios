@@ -16,18 +16,6 @@
  
  */
 
-//- (NSString *)stringWithDeliLine:(NSArray *)deliLine {
-//    if ([deliLine count] == 0) {
-//        return [NSString stringWithFormat:@"The line is currently empty."];
-//    } else {
-//        NSString *theLineIs = @"The line is:";
-//        
-//        for (NSUInteger i = 0; i < [deliLine count]; i++) {
-//            NSUInteger numberInLine = i + 1;
-//            return [NSString stringWithFormat:@"The line is currently empty."];
-//    }
-//}
-
 - (NSString *)stringWithDeliLine:(NSArray *)deliLine {
     NSMutableString *lineCondition = [@"The line is:" mutableCopy];
     
