@@ -16,4 +16,42 @@
  
  */
 
+//- (NSString *)stringWithDeliLine:(NSArray *)deliLine {
+//    if ([deliLine count] == 0) {
+//        return [NSString stringWithFormat:@"The line is currently empty."];
+//    } else {
+//        NSString *theLineIs = @"The line is:";
+//        
+//        for (NSUInteger i = 0; i < [deliLine count]; i++) {
+//            NSUInteger numberInLine = i + 1;
+//            return [NSString stringWithFormat:@"The line is currently empty."];
+//    }
+//}
+
+- (NSString *)stringWithDeliLine:(NSArray *)deliLine {
+    NSMutableString *lineCondition = [@"The line is:" mutableCopy];
+    
+    if ([deliLine count] == 0) {
+        return [NSString stringWithFormat:@"The line is currently empty."];
+    } else {
+        for (NSUInteger i = 0; i < [deliLine count]; i++) {
+            NSUInteger customerNumber = i + 1;
+            NSString *customerName = deliLine[i];
+            [lineCondition appendFormat:@"\n%lu. %@", customerNumber, customerName];
+        }
+    }
+    return lineCondition;
+}
+
+- addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine {
+    [deliLine addObject:name];
+    return nil;
+}
+
+- (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine {
+    NSString *firstInLine = deliLine[0];
+    [deliLine removeObjectAtIndex:0];
+    return firstInLine;
+}
+
 @end
