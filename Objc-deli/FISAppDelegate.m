@@ -47,9 +47,12 @@
 }
 
 - (NSString *)serveNextCustomerInDeliLine:(NSMutableArray *)deliLine{
-    NSString *customerServed = deliLine[0];
-    [deliLine removeObjectAtIndex:0];
-    NSLog(@"Final state of the mutable array: %@", deliLine);
+    NSString *customerServed = @"";
+    if(deliLine != nil){
+        customerServed = deliLine[0];
+        [deliLine removeObjectAtIndex:0];
+        NSLog(@"Final state of the mutable array: %@", deliLine);
+    }
     return customerServed;
 }
 
