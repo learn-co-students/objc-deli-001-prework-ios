@@ -6,6 +6,18 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+
+
+- (NSString *) stringWithDeliLine:(NSString *)deliLine;
+
+- (NSString *) serveNextCustomerInDeliLine:(NSMutableArray *)deliLine;
+
+- (void) addName:(NSString *)name toDeliLine:(NSMutableArray *)deliLine;
+
+
+
+
+
 /*
  
  *  Declare your methods here!
