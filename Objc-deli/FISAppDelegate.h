@@ -8,7 +8,7 @@
 
 
 
-- (NSString *) stringWithDeliLine:(NSString *)deliLine;
+- (NSString *) stringWithDeliLine:(NSArray *)deliLine;
 
 - (NSString *) serveNextCustomerInDeliLine:(NSMutableArray *)deliLine;
 
